@@ -1,4 +1,43 @@
+.home__banner { 
+    width: 100%;
+    height: 35rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-image: url(/images/homeBanner.png);
+    background-size: cover; /* Cover the entire div */
+    background-position: center;
 
+    &__info{ 
+        width: 30rem;
+        height: auto;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-direction: column;
+        padding: 0px 4rem;
+
+        b{ 
+            font-weight: 800;
+            font-size: 2rem;
+            color: #fff;
+        }
+
+        p{ 
+            font-weight: 300;
+            font-size: 1.3rem;
+            color: #b8b8b8;
+        }
+
+        button{
+            background-color: #6F00FF;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 0.3rem;
+            color: #fff;
+        }
+    }
+}
 
 .content__container { 
     width: 100%;
@@ -8,6 +47,11 @@
     align-items: center;
     flex-wrap: wrap;
     padding: 5rem 0px;
+    gap: 3rem;
+
+    @media (max-width:1240px){ 
+        padding: 1rem 0px;
+    }
 
     &__text__area { 
         width: 30rem;
@@ -16,12 +60,33 @@
         justify-content: start;
         align-items: start;
         flex-direction: column;
+
+        h2{ 
+            font-weight: 900;
+        }
+
+        p{ 
+            font-weight: 300;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 750px){ 
+            width: 80%;
+            
+        }
     }
 
     &__image__area{ 
         width: 30rem;
         height: 30rem;
-        background-color: aqua;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: 750px){ 
+            width: 80%;
+            height: auto;
+        }
     }
 }
 

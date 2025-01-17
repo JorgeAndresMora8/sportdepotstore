@@ -1,0 +1,212 @@
+
+
+.item__controller { 
+    width: auto;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    border: 1px solid lightgray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 10px;
+
+    &__btn{ 
+        background-color: transparent;
+        border: none;
+        font-size: 1.5rem;
+    }
+
+    &__btn:focus{ 
+        outline: none;
+    }
+}
+
+.detail__container { 
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+    &__product{ 
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 9rem;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+
+        &__image{ 
+            width: 30rem;
+            height: auto;
+
+            @media (max-width: 800px){ 
+                width: 80%;
+                height: auto;
+            }
+        }
+
+        &__description{ 
+            width: 30rem;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+
+            @media (max-width: 800px){ 
+                width: 80%;
+            }
+
+            &__name { 
+                color: rgb(47, 47, 47);
+                font-weight: 500;
+                font-size: 1.6rem;
+            }
+
+            &__type{ 
+                font-weight: 400;
+                color: darkgray;
+                margin: 0;
+                font-size: 1rem;
+            }
+
+            &__price{ 
+                font-weight: 600;
+                color: #2e2e2e;
+                font-size: 1.8rem;
+                margin: 0;
+            }
+
+            &__quantity{ 
+                font-weight: 300;
+                color: darkgray;
+                margin: 0;
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .related__info{ 
+        width: 70%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 4rem;
+    }
+
+}
+
+.product__size__container { 
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    // margin: 2rem 0px;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+
+    &__option{ 
+        width: 4rem;
+        height: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.3rem;
+        transition: 0.2s ease;
+        border: none;
+        transition: 0.2s ease;
+        background-color: #f1f8ff;
+
+
+        &__no__avaliable{ 
+            width: 4rem;
+        height: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid rgb(220, 220, 220);
+        border-radius: 0.3rem;
+        transition: 0.2s ease;
+        color: lightgray;
+        }
+    }
+}
+
+.recommend__product__title { 
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(50, 50, 50);
+}
+
+
+.btn__add { 
+    width: auto;
+    padding: 10px 20px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #000;
+    border-radius: 1rem;
+    border: none;
+    font-size: 1rem;
+}
+
+.cantidad__input { 
+    padding: 15px;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-left: 0.5rem;
+    border: 1px solid lightgray;
+
+
+    &:focus { 
+        outline: none;
+        border: 1px solid rgb(96, 96, 96);
+    }
+}
+
+.installment__container { 
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+    &__bank{ 
+        width: 4.5rem;
+        height: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__header { 
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        gap: 10px;
+        padding: 3px;
+    }
+
+
+}
+
+.selected { 
+    background-color: #5a7097;
+    color: #fff;
+}

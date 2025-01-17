@@ -1,0 +1,86 @@
+.inputField { 
+    width: 80%;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: 1px solid lightgray;
+    transition: 0.2s ease;
+
+    &:focus{ 
+        border: 1px solid lightblue;
+        box-shadow: 1px 1px 1px 1px rgba(0, 162, 255, 0.2);
+    }
+}
+
+.payment_form { 
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 5rem 0px;
+
+    &_area { 
+        width: 25rem;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 1rem;
+        gap: 10px;
+        padding: 20px 0px;
+
+        h2{ 
+            margin-bottom: 0;
+            font-weight: 600;
+            color: #3a3a3a;
+        }
+
+        &_icon{ 
+            color: rgb(14, 135, 222);
+            font-size: 2rem;
+        }
+
+    }
+}
+
+.bill_detail_area { 
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+}
+
+.select{ 
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    &_input{ 
+        border: 1px solid lightgray;
+        padding: 5px;
+        border-radius: 0.2rem;
+        box-shadow: 1px 2px 2px rgba(0,0,0,0.2);
+        outline: none;
+
+    }
+}
+
+.btn_pay { 
+    background-color: #C4D9FF;
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    color: #2f4967;
+    transition: 0.1s ease;
+
+    &:hover { 
+        box-shadow: 1px 2px 2px rgba(0, 106, 255, 0.2);
+        background-color:#e9f1ff ;
+
+    }
+}

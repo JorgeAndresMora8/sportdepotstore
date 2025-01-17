@@ -1,0 +1,95 @@
+.search_container { 
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5rem 0px;
+
+    @media (max-width: 700px){ 
+        width: 90%;
+        margin-bottom: 0rem;
+        padding: 10px;
+        padding:  0px;
+    }
+
+    &_banner { 
+        width: 100%;
+        height: 15rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+        background-color: #1e1e1e;
+    }
+
+    &_input_area { 
+        background-color: #fafdff;
+        padding: 5px 10px;
+        border-radius: 0.5rem;
+        box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+        transition: 0.2s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30rem;
+
+        &:hover{ 
+            box-shadow: 1px 2px 2px rgba(0, 116, 169, 0.693);
+        }
+
+        @media (max-width: 700px){ 
+            width: 90%;
+            margin-bottom: 0rem;
+            padding: 10px;
+        }
+
+        &_item{ 
+            width: 100%;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            
+        }
+
+        &_button{ 
+            background-color: transparent;
+            border: none;
+            color: rgb(12, 136, 204);
+            font-size: 1.3rem;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 1.5rem;
+            transition: 0.2s ease;
+
+            &:hover{ 
+                background-color:rgb(12, 136, 204);
+                color: #fff;
+            }
+        }
+    }
+}
+
+.search_category_container { 
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap: 20px;
+    padding: 10px 0px;
+    transition: 0.2s ease;
+
+    &_item { 
+        color: #ffffff;
+        cursor: pointer;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 0.3rem;
+        background-color: #BCCCDC;
+
+        &:hover{ 
+            background-color: #7c95ae;
+        }
+    }
+}
+

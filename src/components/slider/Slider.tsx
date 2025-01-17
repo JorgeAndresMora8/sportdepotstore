@@ -1,102 +1,72 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Link } from "react-router-dom";
+import 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js'
 import "swiper/css";
 import "swiper/css/free-mode";
+import { FreeMode, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Card from "../card/Card";
+import 'swiper/swiper-bundle.css';
 
-const ProductSlider = () => {
+interface SliderProps {
+  content: any;
+  Component: any;
+}
+
+const Slider = ({ content, Component }: SliderProps) => {
   return (
     <div className="container py-4 px-4 justify-content-center">
       <Swiper
+      
+       pagination={{
+        dynamicBullets: true,
+      }}
+      
         freeMode={true}
         grabCursor={true}
+        
+        modules={[FreeMode, Pagination]}
         className="mySwiper"
         slidesPerView={5}
+        loop={true}
+        navigation={{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }}
         spaceBetween={30}
+        
         breakpoints={{
-            100: { 
-                slidesPerView: 1,
-                spaceBetween: 20,
-
-              },
-            640: {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            },
-            768: {
-              slidesPerView: 4,
-              spaceBetween: 40,
-            },
-            1024: {
-              slidesPerView: 5,
-              spaceBetween: 50,
-            },
-          }}
+          100: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          465:{ 
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          700: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 50,
+          },
+        }}
         hashNavigation={true}
       >
-        <SwiperSlide>
-          <Link to='/'> <Card /></Link>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Link to='/'> <Card /></Link>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Link to='/'> <Card /></Link>
-        </SwiperSlide>
-
-
-        <SwiperSlide>
-          <Link to='/'> <Card /></Link>
-        </SwiperSlide>
-
-
-        <SwiperSlide>
-          <Link to='/'> <Card /></Link>
-        </SwiperSlide>
-
-
-        <SwiperSlide>
-          <Link to='/'> <Card /></Link>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Link to='/'> <Card /></Link>
-        </SwiperSlide>
-
-        {/* 
-            <SwiperSlide>
-                <h1>Slider 2</h1>
-            </SwiperSlide>
-
-            <SwiperSlide>
-                <h1>Slider 3</h1>
-            </SwiperSlide>
-
-            <SwiperSlide>
-                <h1>Slider 4</h1>
-            </SwiperSlide>
-
-            <SwiperSlide>
-                <h1>Slider 1</h1>
-            </SwiperSlide>
-
-            <SwiperSlide>
-                <h1>Slider 2</h1>
-            </SwiperSlide>
-
-            <SwiperSlide>
-                <h1>Slider 3</h1>
-            </SwiperSlide>
-
-            <SwiperSlide>
-                <h1>Slider 4</h1>
-            </SwiperSlide> */}
+        {content.map((value:any, idx:any) => (
+          <>
+          <SwiperSlide  key={idx} style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+            <Component key={idx} {...value}/>
+          </SwiperSlide>
+          </>
+        ))}
       </Swiper>
     </div>
   );
 };
 
-export default ProductSlider;
+export default Slider;

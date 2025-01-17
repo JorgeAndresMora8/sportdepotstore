@@ -1,0 +1,14 @@
+.title { 
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.description_purchase_container { 
+    width: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 1px 2px 2px rgba(0,0,0,0.2);
+    border-radius: 1rem;
+}

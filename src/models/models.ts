@@ -10,11 +10,3 @@ export interface Product {
     image: string; 
     category: string
 }
-
-export interface User { 
-    username: string; 
-    first_name: string; 
-    password: string; 
-    last_name: string;
-    last_logged_in: string;
-}

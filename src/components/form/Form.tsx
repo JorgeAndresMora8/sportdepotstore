@@ -19,8 +19,8 @@ Form.Label = ({ htmlFor, children }) => {
   return <label htmlFor={htmlFor}>{children}</label>
 }
 
-Form.Input = ({ id, type = 'text', value, onChange }) => { 
-  return <input id={id} type={type} value={value} onChange={onChange}/>
+Form.Input = ({ id, type = 'text', value, onChange, placeholder }) => { 
+  return <input style={{width:'100%'}} placeholder={placeholder} id={id} type={type} value={value} onChange={onChange}/>
 }
 
 Form.SubmitButton = ({ children }) => { 

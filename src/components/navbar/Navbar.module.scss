@@ -69,14 +69,19 @@
 }
 
 .nav {
-    width: 100%;
-    position: fixed;
-    top: $header-height;
-    right: -100%;
-    background: rgba($bg2, 0.8);
-    text-align: center;
-    padding: $spacing-md 0;
-
+        width: 100%;
+        position: fixed;
+        top: 72px;
+        right: -100%;
+        // background: rgba(255, 255, 255, 0.8);
+        background: rgba(255, 255, 255);
+        text-align: center;
+        padding: 16px 0;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     &--open {
         transition: 0.2s ease right;
         right: 0;
@@ -87,9 +92,8 @@
         padding: $spacing-md;
 
         text-decoration: none;
-        color: #1e1e1e;
+        color: #151515;
 
-        height: 100%;
 
         transition: 0.3s ease color;
         &:hover {
@@ -100,7 +104,7 @@
     @include breakpoint(md) {
         position: static;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         background: initial;
         width: auto;
         padding: 0;
@@ -110,6 +114,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            color: #1d1d1d;
         }
     }
 
@@ -121,15 +126,24 @@
     }
 }
 
+.header__toggler { 
+    background-color: transparent;
+    border: none;
+    color: #004479;
+}
+
 .button {
     font-weight: 500;
-    background-color: #758694;
+    background-color: #4379F2;
     color: #fff;
     border: none;
     padding: $spacing-sm $spacing-lg;
     border-radius: $spacing-sm ;
     cursor: pointer;
-    box-shadow: 1px 2px 2px rgba(0,0,0,0.2);
+
+    a{
+        color: #fff;
+    }
 
 
     &:active {
@@ -139,4 +153,13 @@
     &:hover {
         box-shadow: 1px 2px 2px rgba(0, 221, 255, 0.2);
     }
+}
+
+.bankingBanner{ 
+    background: url(/images/bankingbanner2.png);
+    width: 100%;
+    height: 5rem;
+    background-position: center center;  /* This centers the image horizontally and vertically */
+    background-size: cover;             /* Ensures the image covers the entire element */
+    background-repeat: no-repeat; 
 }

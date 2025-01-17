@@ -1,0 +1,104 @@
+.button_option { 
+    background-color: #4A628A;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: 0.2s ease;
+
+    &:hover{ 
+        background-color: #C4D9FF;
+        box-shadow: 1px 2px 2px rgba(58, 143, 233, 0.2);
+        color: #4A628A;
+    }
+}
+
+.cart__container { 
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5rem 0px;
+
+
+    &__header { 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+        margin-top: 5rem;
+
+
+        b { 
+            font-size: 2rem;
+        }
+
+        .cart__buttons__area { 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 1rem 0px;
+        }
+
+        button { 
+            background-color: #fff;
+            padding: 5px 10px;
+            border-radius: 0.2rem;
+            border: 1px solid lightgray;
+            padding: 5px;
+            box-shadow: 1px 2px 2px rgba(56, 88, 123, 0.2);
+        }
+    }
+}
+
+.purchase__info { 
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid lightgray;
+    margin: 2rem 0px;
+
+    span{ 
+        font-weight: 400;
+        font-size: 1.3rem;
+        color: gray;
+    }
+    b{ 
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+}
+
+.btn_item_action{ 
+    background-color: black;
+    border: none;
+    height: 2.5rem;
+    width: 2.5rem;
+    padding: 12px;
+    color: #fff;
+    border-radius: 5rem;
+    text-align: center;
+}
+
+.btn_delete_item { 
+    background-color: transparent;
+    color: #ADD8E6;
+    font-size: 1.4rem;
+    border: none;
+}
+
+.shoppingBagIcon{ 
+    color: #4A628A;
+    font-size: 3rem;
+    margin: 1rem 0px;
+}
+
+.empty_car_message { 
+    font-weight: 300;
+    font-size: 1.5rem;
+}

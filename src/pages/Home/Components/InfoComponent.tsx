@@ -9,17 +9,19 @@ export interface InfoComponentProps {
     buttonLabel?:string
 }
 
-const InfoComponent = ({ title, text }: InfoComponentProps) => {
+const InfoComponent = ({ title, text, image }: InfoComponentProps) => {
     console.log(text)
   return (
     <div className={styles.content__container}>
       <div className={styles.content__container__text__area}>
-        <h2>{title}</h2>
+        <h2>{title}<span style={{color:'#6F00FF'}}>.</span></h2>
         <p>{text}</p>
-        <Button text='buy now' type='button' link='/admin'/>
+        <Button text='See Products' type='button' link='/shoes'/>
       </div>
       <div className={styles.content__container__image__area}>
-        <img style={{borderRadius: "1rem", width: "100%"}} src='./images/trailRunning2.jpg' />
+        <img style={{borderRadius: "1rem", width: "100%"}} src={image} />
+        {/* <img style={{borderRadius: "1rem", width: "100%"}} src='./images/trailRunningShoe.png' /> */}
+        {/* <img style={{borderRadius: "1rem", width: "100%"}} src='./images/trekkingShoe.png' /> */}
       </div>
 
     </div>
